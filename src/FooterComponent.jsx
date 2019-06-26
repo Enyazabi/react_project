@@ -10,7 +10,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 
 
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
 
     appBar: {
         top: 'auto',
