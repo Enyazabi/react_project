@@ -5,6 +5,7 @@ import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
 
 function App() {
+
     return (
         <div className="App">
             <Header/>
@@ -12,6 +13,7 @@ function App() {
             <Footer/>
         </div>
     );
+
 }
 
 export default App;
