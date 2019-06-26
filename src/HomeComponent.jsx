@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function PaperSheet() {
+export default function Home() {
     const classes = useStyles();
 
     return (

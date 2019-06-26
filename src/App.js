@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import ButtonAppBar from './HeaderComponent.jsx';
-import BottomAppBar from './FooterComponent.jsx';
-import PaperSheet from './HomeComponent.jsx';
+import Header from './HeaderComponent.jsx';
+import Footer from './FooterComponent.jsx';
+import Home from './HomeComponent.jsx';
 
 function App() {
     return (
         <div className="App">
-            <ButtonAppBar/>
-            <BottomAppBar/>
-            <PaperSheet/>
+            <Header/>
+            <Home/>
+            <Footer/>
         </div>
     );
 }
