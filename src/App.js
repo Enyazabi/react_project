@@ -3,22 +3,23 @@ import './App.css';
 import Header from './HeaderComponent.jsx';
 import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
 
     return (
+        <BrowserRouter>
         <div className="App">
-            <BrowserRouter>
-
 
 
                 <Header/>
-                <Home/>
+                <Route exact path="/home" component={Home}/>
+
                 <Footer/>
-            </BrowserRouter>
+
 
         </div>
+        </BrowserRouter>
     );
 
 }
