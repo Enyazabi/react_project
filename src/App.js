@@ -3,7 +3,7 @@ import './App.css';
 import Header from './HeaderComponent.jsx';
 import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
 
@@ -11,13 +11,13 @@ function App() {
         <BrowserRouter>
         <div className="App">
 
-
+        <Switch>
                 <Header/>
                 <Route exact path="/home" component={Home}/>
 
                 <Footer/>
 
-
+        </Switch>
         </div>
         </BrowserRouter>
     );
