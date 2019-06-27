@@ -11,10 +11,7 @@ function App() {
         <BrowserRouter>
         <div className="App">
             <Header/>
-
                 <Route exact path="/" component={Home}/>
-
-
             <Footer/>
         </div>
         </BrowserRouter>
