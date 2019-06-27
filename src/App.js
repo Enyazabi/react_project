@@ -3,21 +3,19 @@ import './App.css';
 import Header from './HeaderComponent.jsx';
 import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
 
     return (
         <BrowserRouter>
         <div className="App">
+            <Header/>
 
-        <Switch>
-                <Header/>
-                <Route exact path="/home" component={Home}/>
+                <Route exact path="/" component={Home}/>
 
-                <Footer/>
 
-        </Switch>
+            <Footer/>
         </div>
         </BrowserRouter>
     );
