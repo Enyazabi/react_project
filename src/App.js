@@ -3,6 +3,7 @@ import './App.css';
 import Header from './HeaderComponent.jsx';
 import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
+import CatalogComponent from './CatalogComponent.jsx';
 
 function App() {
 
@@ -10,7 +11,9 @@ function App() {
         <div className="App">
             <Header/>
             <Home/>
+            <CatalogComponent/>
             <Footer/>
+
         </div>
     );
 
