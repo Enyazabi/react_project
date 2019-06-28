@@ -10,11 +10,11 @@ function App() {
 
     return (
         <BrowserRouter>
-        <div className="App">
+        <div className ="App">
             <Header/>
-            <Home/>
-            <CatalogComponent/>
-                <Route exact path="/" component={Home}/>
+            <Route exact path ="/" component = {Home}/>
+            <Route path = "/catalog" component = {CatalogComponent}/>
+
             <Footer/>
         </div>
         </BrowserRouter>
