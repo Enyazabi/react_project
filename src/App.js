@@ -4,19 +4,20 @@ import Header from './HeaderComponent.jsx';
 import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
 import CatalogComponent from './CatalogComponent.jsx';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
 
     return (
-        <div className="App">
+        <BrowserRouter>
+        <div className ="App">
             <Header/>
-            <Home/>
-            <CatalogComponent/>
+            <Route exact path ="/" component = {Home}/>
+            <Route path = "/catalog" component = {CatalogComponent}/>
             <Footer/>
-
         </div>
+        </BrowserRouter>
     );
-
 }
 
 export default App;
