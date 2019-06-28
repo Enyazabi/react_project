@@ -14,12 +14,10 @@ function App() {
             <Header/>
             <Route exact path ="/" component = {Home}/>
             <Route path = "/catalog" component = {CatalogComponent}/>
-
             <Footer/>
         </div>
         </BrowserRouter>
     );
-
 }
 
 export default App;
