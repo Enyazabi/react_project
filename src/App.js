@@ -15,7 +15,7 @@ function App() {
             <Header/>
             <Route exact path ="/" component = {Home}/>
             <Route path = "/catalog" component = {CatalogComponent}/>
-            <Route path = "/login" component = {SignInComponent}/>
+            <Route path = "/signin" component = {SignInComponent}/>
             <Footer/>
         </div>
         </BrowserRouter>
