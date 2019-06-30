@@ -5,6 +5,7 @@ import Footer from './FooterComponent.jsx';
 import Home from './HomeComponent.jsx';
 import CatalogComponent from './CatalogComponent.jsx';
 import { BrowserRouter, Route } from 'react-router-dom';
+import SignInComponent from "./SignInComponent";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <Header/>
             <Route exact path ="/" component = {Home}/>
             <Route path = "/catalog" component = {CatalogComponent}/>
+            <Route path = "/signin" component = {SignInComponent}/>
             <Footer/>
         </div>
         </BrowserRouter>
