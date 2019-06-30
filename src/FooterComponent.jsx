@@ -3,12 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import MoreIcon from '@material-ui/icons/MoreVert';
-
-
+import Button from "@material-ui/core/Button/Button";
 
 const useStyles = makeStyles(() => ({
 
@@ -22,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
 }));
 
-export default function Footer() {
+export default function FooterComponent() {
     const classes = useStyles();
 
     return (
@@ -31,17 +26,10 @@ export default function Footer() {
 
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="Open drawer">
-                        <MenuIcon />
-                    </IconButton>
-
+                    <Button color="inherit" variant="h6" className={classes.title}>
+                        Copyright 2019
+                    </Button>
                     <div className={classes.grow} />
-                    <IconButton color="inherit">
-                        <SearchIcon />
-                    </IconButton>
-                    <IconButton edge="end" color="inherit">
-                        <MoreIcon />
-                    </IconButton>
                 </Toolbar>
             </AppBar>
         </React.Fragment>
