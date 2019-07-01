@@ -27,7 +27,10 @@ export default function FooterComponent() {
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
                     <Button color="inherit" variant="h6" className={classes.title}>
-                        Copyright 2019
+                        Copyright&nbsp;
+                        {
+                            (new Date).getFullYear()
+                        }
                     </Button>
                     <div className={classes.grow} />
                 </Toolbar>
