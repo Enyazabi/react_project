@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button/Button";
+import Link from "@material-ui/core/Link/Link";
 
 const useStyles = makeStyles(() => ({
     appBar: {
@@ -13,7 +13,6 @@ const useStyles = makeStyles(() => ({
     grow: {
         flexGrow: 1,
     },
-
 }));
 
 function FooterComponent() {
@@ -24,12 +23,12 @@ function FooterComponent() {
             <CssBaseline />
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
-                    <Button color="inherit" variant="h6" className={classes.title}>
+                    <Link color="inherit" variant="h6" href="https://material-ui.com/" className={classes.title}>
                         Copyright&nbsp;
                         {
                             (new Date).getFullYear()
                         }
-                    </Button>
+                    </Link>
                     <div className={classes.grow} />
                 </Toolbar>
             </AppBar>
