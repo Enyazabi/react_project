@@ -13,6 +13,3 @@ function CatalogComponent () {
 }
 
 export default CatalogComponent;
-
-
-
