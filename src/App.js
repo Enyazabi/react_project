@@ -1,10 +1,10 @@
-import React from 'react';
-import './App.css';
-import Header from './HeaderComponent.jsx';
-import Footer from './FooterComponent.jsx';
-import Home from './HomeComponent.jsx';
-import CatalogComponent from './CatalogComponent.jsx';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import HeaderComponent from "./HeaderComponent.jsx";
+import FooterComponent from "./FooterComponent.jsx";
+import HomeComponent from "./HomeComponent.jsx";
+import CatalogComponent from "./CatalogComponent.jsx";
+import { BrowserRouter, Route } from "react-router-dom";
 import SignInComponent from "./SignInComponent";
 
 function App() {
@@ -12,11 +12,11 @@ function App() {
     return (
         <BrowserRouter>
         <div className ="App">
-            <Header/>
-            <Route exact path ="/" component = {Home}/>
+            <HeaderComponent/>
+            <Route exact path ="/" component = {HomeComponent}/>
             <Route path = "/catalog" component = {CatalogComponent}/>
             <Route path = "/signin" component = {SignInComponent}/>
-            <Footer/>
+            <FooterComponent/>
         </div>
         </BrowserRouter>
     );

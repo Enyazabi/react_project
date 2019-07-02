@@ -1,14 +1,15 @@
-import React from 'react';
-import CardComponent from './CardComponent.jsx';
+import React from "react";
+import CardComponent from "./CardComponent.jsx";
 
-export default function CatalogComponent () {
-    return <div>
-        <CardComponent/>
-        <CardComponent/>
-        <CardComponent/>
+function CatalogComponent () {
 
-    </div>
+    return (
+        <div>
+            <CardComponent/>
+            <CardComponent/>
+            <CardComponent/>
+        </div>
+    );
 }
 
-
-
+export default CatalogComponent;
