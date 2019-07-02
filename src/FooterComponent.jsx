@@ -1,12 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button/Button";
 
 const useStyles = makeStyles(() => ({
-
     appBar: {
         top: 'auto',
         bottom: 0,
@@ -17,13 +16,12 @@ const useStyles = makeStyles(() => ({
 
 }));
 
-export default function FooterComponent() {
+function FooterComponent() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
-
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
                     <Button color="inherit" variant="h6" className={classes.title}>
@@ -38,3 +36,5 @@ export default function FooterComponent() {
         </React.Fragment>
     );
 }
+
+export default FooterComponent;
