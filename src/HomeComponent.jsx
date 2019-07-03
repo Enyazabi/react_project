@@ -11,6 +11,8 @@ const useStyles = makeStyles(theme => ({
 
 function HomeComponent() {
     const classes = useStyles();
+    localStorage.setItem("password", "12345");
+    localStorage.setItem("username", "vasya");
 
     return (
         <div>

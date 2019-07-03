@@ -10,6 +10,7 @@ import SignInComponent from "./SignInComponent";
 function App() {
 
     return (
+
         <BrowserRouter>
         <div className ="App">
             <HeaderComponent/>

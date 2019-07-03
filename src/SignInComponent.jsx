@@ -26,45 +26,54 @@ function MadeWithLove() {
     );
 }
 
-const useStyles = makeStyles(theme => ({
-    '@global': {
-        body: {
-            backgroundColor: theme.palette.common.white,
-        },
-    },
-    paper: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%',
-        marginTop: theme.spacing(1),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-}));
 
-function SignInComponent() {
-    const classes = useStyles();
+
+class SignInComponent extends React.Component {
+
+    login = (log, pass)=>{
+        if(log === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
+            console.log("Hello!");
+        }
+    };
+
+    useStyles = makeStyles(theme => ({
+        '@global': {
+            body: {
+                backgroundColor: theme.palette.common.white,
+            },
+        },
+        paper: {
+            marginTop: theme.spacing(8),
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
+        avatar: {
+            margin: theme.spacing(1),
+            backgroundColor: theme.palette.secondary.main,
+        },
+        form: {
+            width: '100%',
+            marginTop: theme.spacing(1),
+        },
+        submit: {
+            margin: theme.spacing(3, 0, 2),
+        },
+    }));
+
+    render(){
 
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
+            <div >
+                <Avatar >
                     <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
                     Sign in
                 </Typography>
-                <form className={classes.form} noValidate>
+                <form  noValidate>
                     <TextField
                         variant="outlined"
                         margin="normal"
@@ -91,12 +100,11 @@ function SignInComponent() {
                         control={<Checkbox value="remember" color="primary" />}
                         label="Remember me"
                     />
-                    <Button
-                        type="submit"
+                    <Button onClick={()=>this.login('vasya','12345')}
                         fullWidth
                         variant="contained"
                         color="primary"
-                        className={classes.submit}
+
                     >
                         Sign In
                     </Button>
@@ -119,6 +127,7 @@ function SignInComponent() {
             </Box>
         </Container>
     );
+}
 }
 
 export default SignInComponent;
