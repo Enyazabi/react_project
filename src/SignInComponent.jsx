@@ -26,9 +26,15 @@ function MadeWithLove() {
     );
 }
 
-
-
 class SignInComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.focus = this.focus.bind(this);
+    }
+
+    focus() {
+        this.textInput.focus();
+    }
 
     login = (log, pass)=>{
         if(log === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
@@ -83,7 +89,7 @@ class SignInComponent extends React.Component {
                         label="Email Address"
                         name="email"
                         autoComplete="email"
-                        autoFocus
+                        ref={(input) => {this.textInput = input;}}
                     />
                     <TextField
                         variant="outlined"
