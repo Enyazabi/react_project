@@ -9,7 +9,7 @@ const CatalogComponent = () => (
                 <CardComponent/>,
                 <CardComponent/>,
                 <CardComponent/>
-            ].map(item => <li key={item}>{item}</li>)}
+            ].map(item => <li key={item} >{item}</li>)}
         </div>
     );
 
