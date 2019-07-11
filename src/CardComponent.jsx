@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     },
 });
 
-function CardComponent() {
+function CardComponent(good) {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
@@ -35,7 +35,7 @@ function CardComponent() {
                 </Typography>
                 <Typography variant="h5" component="h2">
                     be
-                    {bull}
+                    {good}
                     nev
                     {bull}o{bull}
                     lent
@@ -50,7 +50,7 @@ function CardComponent() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">more</Button>
             </CardActions>
         </Card>
     );
