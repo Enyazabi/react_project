@@ -28,7 +28,7 @@ function MadeWithLove() {
 
 const SignInComponent = () =>{
 
-    const [value, changeValue] = useState('test value');
+    const [value, changeValue] = useState('enter your email');
     const handleChangeValue = (e) => {
         changeValue(e.target.value);
     };
@@ -86,9 +86,9 @@ const SignInComponent = () =>{
                         id="email"
                         name="email"
                         autoComplete="email"
-                        label={`${value}`}
+                        label="your email"
                         value={value}
-                        onChange={changeValue}
+                        onChange={handleChangeValue}
                     />
                     <TextField
                         variant="outlined"
@@ -100,12 +100,14 @@ const SignInComponent = () =>{
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        value={value}
+                        onChange={handleChangeValue}
                     />
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
                         label="Remember me"
                     />
-                    <Button onClick={()=>this.login('vasya','12345')}
+                    <Button onClick={()=>login('vasya','12345')}
                         fullWidth
                         variant="contained"
                         color="primary"
@@ -132,7 +134,7 @@ const SignInComponent = () =>{
             </Box>
         </Container>
     );
-}
+};
 
 
 export default SignInComponent;
