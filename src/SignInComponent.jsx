@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -26,12 +26,15 @@ function MadeWithLove() {
     );
 }
 
-const SignInComponent = () =>{
-
+const SignInComponent = () => {
     const [value, changeValue] = useState('enter your email');
     const handleChangeValue = (e) => {
         changeValue(e.target.value);
     };
+
+    useEffect(() => {
+        document.title = 'Sign in'
+    });
 
     const login = (log, pass)=>{
         if(log === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
