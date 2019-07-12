@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -26,23 +26,22 @@ function MadeWithLove() {
     );
 }
 
-class SignInComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.focus = this.focus.bind(this);
-    }
+const SignInComponent = () =>{
 
-    focus() {
-        this.textInput.focus();
-    }
+    const [value, changeValue] = useState('test value');
+    const handleChangeValue = (e) => {
+        changeValue(e.target.value);
+    };
 
-    login = (log, pass)=>{
+    const login = (log, pass)=>{
         if(log === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
             console.log("Hello!");
         }
     };
 
-    useStyles = makeStyles(theme => ({
+
+
+    const useStyles = makeStyles(theme => ({
         '@global': {
             body: {
                 backgroundColor: theme.palette.common.white,
@@ -67,7 +66,6 @@ class SignInComponent extends React.Component {
         },
     }));
 
-    render(){
 
     return (
         <Container component="main" maxWidth="xs">
@@ -86,10 +84,11 @@ class SignInComponent extends React.Component {
                         required
                         fullWidth
                         id="email"
-                        label="Email Address"
                         name="email"
                         autoComplete="email"
-                        ref={(input) => {this.textInput = input;}}
+                        label={`${value}`}
+                        value={value}
+                        onChange={changeValue}
                     />
                     <TextField
                         variant="outlined"
@@ -134,6 +133,6 @@ class SignInComponent extends React.Component {
         </Container>
     );
 }
-}
+
 
 export default SignInComponent;
