@@ -9,14 +9,17 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const useDocumentTitle = (title) => {
+    useEffect(() => {
+        document.title = title;
+    });
+};
+
 function HomeComponent() {
     const classes = useStyles();
     localStorage.setItem("password", "12345");
     localStorage.setItem("username", "vasya");
-
-    useEffect(() => {
-        document.title = 'Home page'
-    });
+    useDocumentTitle("Home page");
 
     return (
         <div>

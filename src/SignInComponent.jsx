@@ -26,23 +26,25 @@ function MadeWithLove() {
     );
 }
 
+const useDocumentTitle = (title) => {
+    useEffect(() => {
+        document.title = title;
+    });
+};
+
 const SignInComponent = () => {
     const [value, changeValue] = useState('enter your email');
     const handleChangeValue = (e) => {
         changeValue(e.target.value);
     };
 
-    useEffect(() => {
-        document.title = 'Sign in'
-    });
+    useDocumentTitle("Sign in");
 
-    const login = (log, pass)=>{
+    const login = (log, pass) => {
         if(log === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
             console.log("Hello!");
         }
     };
-
-
 
     const useStyles = makeStyles(theme => ({
         '@global': {
@@ -138,6 +140,5 @@ const SignInComponent = () => {
         </Container>
     );
 };
-
 
 export default SignInComponent;
