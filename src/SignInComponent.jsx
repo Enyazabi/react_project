@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -38,6 +38,11 @@ const SignInComponent = () => {
     const handleChangeValue = (e) => {
         changeValue(e.target.value);
     };
+    const ref = useRef(null);
+
+    useEffect(() => {
+        ref.current.focus();
+    });
 
     const handleChangeValue1 = (e1) => {
         changeValue1(e1.target.value);
@@ -98,6 +103,7 @@ const SignInComponent = () => {
                         label="your email"
                         value={value}
                         onChange={handleChangeValue}
+                        ref={ref}
                     />
                     <TextField
                         variant="outlined"
