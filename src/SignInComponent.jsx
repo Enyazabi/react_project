@@ -34,8 +34,13 @@ const useDocumentTitle = (title) => {
 
 const SignInComponent = () => {
     const [value, changeValue] = useState('enter your email');
+    const [value1, changeValue1] = useState('enter your password');
     const handleChangeValue = (e) => {
         changeValue(e.target.value);
+    };
+
+    const handleChangeValue1 = (e1) => {
+        changeValue1(e1.target.value);
     };
 
     useDocumentTitle("Sign in");
@@ -71,7 +76,6 @@ const SignInComponent = () => {
         },
     }));
 
-
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -105,8 +109,8 @@ const SignInComponent = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
-                        value={value}
-                        onChange={handleChangeValue}
+                        value={value1}
+                        onChange={handleChangeValue1}
                     />
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
@@ -116,7 +120,6 @@ const SignInComponent = () => {
                         fullWidth
                         variant="contained"
                         color="primary"
-
                     >
                         Sign In
                     </Button>
